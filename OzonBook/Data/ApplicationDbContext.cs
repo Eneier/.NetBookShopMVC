@@ -1,6 +1,15 @@
-﻿namespace OzonBook.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using OzonBook.Models;
 
-public class ApplicationDbContext
+
+namespace OzonBook.Data;
+
+public class ApplicationDbContext : DbContext
 {
-    
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+    {
+        
+    }
+
+    public DbSet<Category> Categories { get; set; }
 }
