@@ -54,12 +54,16 @@ html {
     color: white;
 }
 
+.text-footer {
+    color: rgba(255, 255, 255, 0.55);
+}
+
 .text-warning {
     color: #BD7418 !important;
 }
 
 .text-secondary {
-    color: #425F4B !important;
+    color: #425F4B !important;rgba(255, 255, 255, 0.55);
 }
 
 .text-primary {
@@ -85,7 +89,7 @@ bg-success {
 
 
 .card {
-    border-color: #425F4B !important;
+  /*  border-color: #425F4B !important;*/
 }
 
 
