@@ -38,7 +38,6 @@ namespace OzonBook.Controllers
                 _db.Categories.Add(obj);
                 _db.SaveChanges();
                 TempData["success"] = "Category created successfully"; 
-                TempData["error"] = "Something went wrong"; 
                 return RedirectToAction("Index");
             }
             return View();
@@ -69,7 +68,6 @@ namespace OzonBook.Controllers
                 _db.Categories.Update(obj);
                 _db.SaveChanges();
                 TempData["success"] = "Category updated successfully";
-                TempData["error"] = "Something went wrong";
                 return RedirectToAction("Index");
             }
             return View();
@@ -102,7 +100,6 @@ namespace OzonBook.Controllers
             _db.Categories.Remove(obj);
             _db.SaveChanges();
             TempData["success"] = "Category deleted successfully";
-            TempData["error"] = "Cannot delete category";
             return RedirectToAction("Index");
         }
     }

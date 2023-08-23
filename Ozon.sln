@@ -1,6 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OzonBook", "OzonBook\OzonBook.csproj", "{6A8A0BC1-28BA-4F4E-9E10-1F302F975FEA}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34004.107
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OzonBook", "OzonBook\OzonBook.csproj", "{6A8A0BC1-28BA-4F4E-9E10-1F302F975FEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ozon.DataAccess", "Ozon.DataAccess\Ozon.DataAccess.csproj", "{742E2520-18BD-497F-98BC-DDE204EA81ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ozon.Models", "Ozon.Models\Ozon.Models.csproj", "{A432A170-806B-4AA3-954C-1889716ED8DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ozon.Utility", "Ozon.Utility\Ozon.Utility.csproj", "{CA21A7C4-FBDA-45A4-97CD-1A6FF1AD72A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +21,23 @@ Global
 		{6A8A0BC1-28BA-4F4E-9E10-1F302F975FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A8A0BC1-28BA-4F4E-9E10-1F302F975FEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A8A0BC1-28BA-4F4E-9E10-1F302F975FEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{742E2520-18BD-497F-98BC-DDE204EA81ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{742E2520-18BD-497F-98BC-DDE204EA81ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{742E2520-18BD-497F-98BC-DDE204EA81ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{742E2520-18BD-497F-98BC-DDE204EA81ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A432A170-806B-4AA3-954C-1889716ED8DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A432A170-806B-4AA3-954C-1889716ED8DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A432A170-806B-4AA3-954C-1889716ED8DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A432A170-806B-4AA3-954C-1889716ED8DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA21A7C4-FBDA-45A4-97CD-1A6FF1AD72A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA21A7C4-FBDA-45A4-97CD-1A6FF1AD72A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA21A7C4-FBDA-45A4-97CD-1A6FF1AD72A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA21A7C4-FBDA-45A4-97CD-1A6FF1AD72A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AB0C295F-596C-4AAB-AD55-74B9476B61DE}
 	EndGlobalSection
 EndGlobal
