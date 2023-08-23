@@ -16,4 +16,10 @@
       </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Ozon.DataAccess\Ozon.DataAccess.csproj" />
+      <ProjectReference Include="..\Ozon.Models\Ozon.Models.csproj" />
+      <ProjectReference Include="..\Ozon.Utility\Ozon.Utility.csproj" />
+    </ItemGroup>
+
 </Project>

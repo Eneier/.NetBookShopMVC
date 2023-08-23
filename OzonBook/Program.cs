@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using OzonBook.Data;
+using Ozon.DataAccess.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

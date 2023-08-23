@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using OzonBook.Models;
+using Ozon.Models;
 
 
-namespace OzonBook.Data;
+namespace Ozon.DataAccess.Data;
 
 public class ApplicationDbContext : DbContext
 {

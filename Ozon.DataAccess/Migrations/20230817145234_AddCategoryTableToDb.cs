@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace OzonBook.Migrations
+namespace OzonBook.DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class AddCategoryTableToDb : Migration

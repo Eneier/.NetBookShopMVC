@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using OzonBook.Data;
+using Ozon.DataAccess.Data;
 
 #nullable disable
 
-namespace OzonBook.Migrations
+namespace OzonBook.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20230818132055_SeedCategoryTable")]

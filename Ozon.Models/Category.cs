@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace OzonBook.Models;
+namespace Ozon.Models;
 
 public class Category
 {

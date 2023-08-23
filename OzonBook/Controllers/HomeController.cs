@@ -1,6 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using OzonBook.Models;
+using Ozon.Models;
 
 namespace OzonBook.Controllers;
 

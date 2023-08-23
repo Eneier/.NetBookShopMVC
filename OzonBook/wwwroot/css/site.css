@@ -54,6 +54,10 @@ html {
     color: white;
 }
 
+.td-text-align-center {
+    vertical-align: middle;
+}
+
 .text-footer {
     color: rgba(255, 255, 255, 0.55);
 }

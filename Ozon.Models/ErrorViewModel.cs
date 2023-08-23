@@ -1,4 +1,4 @@
-namespace OzonBook.Models;
+namespace Ozon.Models;
 
 public class ErrorViewModel
 {

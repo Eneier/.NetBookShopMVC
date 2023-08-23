@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using OzonBook.Data;
-using OzonBook.Models;
+using Ozon.Models;
+using Ozon.DataAccess.Data;
 
 namespace OzonBook.Controllers
 {
