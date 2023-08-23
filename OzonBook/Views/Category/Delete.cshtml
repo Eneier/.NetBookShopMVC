@@ -2,25 +2,23 @@
 
 
 <form method="post">
+    <input asp-for="Id" hidden />
     <div class="p-3 mt-4" style="border: 1px solid #d3d3d3">
         <div class="row pb-2">
-            <h2 class="text-primary">Create Category</h2>
+            <h2 class="text-primary">Delete Category</h2>
             <hr />
         </div>
-        @* <div asp-validation-summary="All"></div> *@
         <div class="mb-3 row p-1">
             <label asp-for="Name" class="p-0"></label>
-            <input asp-for="Name" class="form-control" style="border: 1px solid #d3d3d3 " />
-            <span asp-validation-for="Name" class="text-danger"></span>
+            <input asp-for="Name" disabled class="form-control" style="border: 1px solid #d3d3d3 " />
         </div>
         <div class="mb-3 row p-1">
             <label asp-for="DisplayOrder" class="p-0"></label>
-            <input asp-for="DisplayOrder" class="form-control" style="border: 1px solid #d3d3d3" />
-            <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+            <input asp-for="DisplayOrder" disabled class="form-control" style="border: 1px solid #d3d3d3" />
         </div>
         <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                <button type="submit" class="btn btn-primary form-control" style="border: 1px solid black">Create</button>
+                <button type="submit" class="btn btn-danger form-control" style="border: 1px solid black">Delete</button>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                 <a asp-controller="Category" asp-action="Index" class="btn btn-outline-secondary form-control">Back To List</a>
@@ -31,9 +29,3 @@
     </div>
 
 </form>
-
-@section Scripts {
-    @{
-        <partial name="_ValidationScriptsPartial" />
-    }
-}
