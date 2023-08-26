@@ -3,8 +3,9 @@ using Ozon.Models;
 using Ozon.DataAccess.Data;
 using Ozon.DataAccess.Repository.IRepository;
 
-namespace OzonBook.Controllers
+namespace OzonBook.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -38,7 +39,7 @@ namespace OzonBook.Controllers
             {
                 _unitOfWork.Category.Add(obj);
                 _unitOfWork.Save();
-                TempData["success"] = "Category created successfully"; 
+                TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index");
             }
             return View();
