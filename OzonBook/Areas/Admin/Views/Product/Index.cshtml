@@ -1,10 +1,10 @@
-﻿@model List<Category>
+﻿@model List<Product>
 
-<div class="card shadow border-1 mt-4">
+<div class="card shadow border-1 my-4">
     <div class="card-header bg-secondary bg-gradient ml-0 py-3">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="text-white py-2">Category List</h2>
+                <h2 class="text-white py-2">Product List</h2>
             </div>
         </div>
     </div>
@@ -14,8 +14,8 @@
             </div>
 
             <div class="col-6 text-end">
-                <a asp-controller="Category" asp-action="Create" class="btn btn-primary">
-                    <i class="bi bi-plus-circle"></i> Create New Category
+                <a asp-controller="Product" asp-action="Create" class="btn btn-primary">
+                    <i class="bi bi-plus-circle"></i> Create New Product
                 </a>
             </div>
         </div>
@@ -23,26 +23,32 @@
         <table class="table table-primary table-bordered table-striped">
             <thead>
                 <tr>
-                    <th class="manage-buttons">Category Name </th>
-                    <th class="manage-buttons">Display Order</th>
+                    <th class="manage-buttons">Title</th>
+                    <th class="manage-buttons">ISBN</th>
+                    <th class="manage-buttons">Price</th>
+                    <th class="manage-buttons">Author</th>
+                    <th class="manage-buttons">Category</th>
                     <th class="manage-buttons">Manage</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var obj in Model.OrderBy(sort => sort.DisplayOrder))
+                @foreach (var obj in Model)
                 {
                     <tr>
-                        <td class="td-text-align-center">@obj.Name</td>
-                        <td class="td-text-align-center">@obj.DisplayOrder</td>
-                        <td>
+                        <td class="td-text-align-center">@obj.Title</td>
+                        <td class="td-text-align-center">@obj.ISBN</td>
+                        <td class="td-text-align-center">@obj.Price</td>
+                        <td class="td-text-align-center">@obj.Author</td>
+                        <td class="td-text-align-center">Category</td>
+                                              <td>
                             <div class="row justify-content-center">
                                 <div class="btn-group col-xl-6 col-lg-6 col-md-12 col-sm-12" role="group">
-                                    <a asp-controller="Category" asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-primary btn-block">
+                                    <a asp-controller="Product" asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-primary btn-block">
                                         <i class="bi bi-pencil-square"></i> Edit
                                     </a>
                                 </div>
                                 <div class="btn-group col-xl-6 col-lg-6 col-md-12 col-sm-12" role="group">
-                                    <a asp-controller="Category" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger btn-block">
+                                    <a asp-controller="Product" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger btn-block">
                                         <i class="bi bi-trash-fill"></i>Delete
                                     </a>
                                 </div>
