@@ -2,6 +2,8 @@
 using Ozon.Models;
 using Ozon.DataAccess.Data;
 using Ozon.DataAccess.Repository.IRepository;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Ozon.Models.ViewModels;
 
 namespace OzonBook.Areas.Admin.Controllers
 {
@@ -24,21 +26,38 @@ namespace OzonBook.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            return View(new Product());
+            //Get category id and name from table Category from DB
+            ProductVM productVM = new()
+            {
+                CategoryList = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
+                {
+                    Text = u.Name,
+                    Value = u.Id.ToString(),
+                }),
+                Product = new Product()
+            };
+            return View(productVM);
         }
 
         [HttpPost]
-        public IActionResult Create(Product obj)
+        public IActionResult Create(ProductVM productVM)
         {
             if (ModelState.IsValid)
             {
-                _unitOfWork.Product.Add(obj);
+                _unitOfWork.Product.Add(productVM.Product);
                 _unitOfWork.Save();
                 TempData["success"] = "Product created successfully";
                 return RedirectToAction("Index");
             }
-            return View();
-
+            else
+            {
+                productVM.CategoryList = _unitOfWork.Category.GetAll().Select(u => new SelectListItem
+                {
+                    Text = u.Name,
+                    Value = u.Id.ToString(),
+                });
+                return View(productVM);
+            }
         }
 
         [HttpGet]
