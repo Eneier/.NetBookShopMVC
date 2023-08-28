@@ -100,6 +100,11 @@ bg-success {
     text-align: center;
 }
 
+.label-color {
+    color: grey;
+    font-size: 0.85rem;
+}
+
 
 
 
