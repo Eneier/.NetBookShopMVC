@@ -39,8 +39,8 @@
                         <td class="td-text-align-center">@obj.ISBN</td>
                         <td class="td-text-align-center">@obj.Price</td>
                         <td class="td-text-align-center">@obj.Author</td>
-                        <td class="td-text-align-center">Category</td>
-                                              <td>
+                        <td class="td-text-align-center">@obj.Category.Name</td>
+                        <td>
                             <div class="row justify-content-center">
                                 <div class="btn-group col-xl-6 col-lg-6 col-md-12 col-sm-12" role="group">
                                     <a asp-controller="Product" asp-action="Upsert" asp-route-id="@obj.Id" class="btn btn-primary btn-block">
