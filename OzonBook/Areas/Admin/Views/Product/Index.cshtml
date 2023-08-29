@@ -20,7 +20,7 @@
             </div>
         </div>
 
-        <table class="table table-primary table-bordered table-striped">
+        <table id="tblData" class="table table-primary table-bordered table-striped" style="width: 100%;">
             <thead>
                 <tr>
                     <th class="manage-buttons">Title</th>
@@ -31,32 +31,10 @@
                     <th class="manage-buttons">Manage</th>
                 </tr>
             </thead>
-            <tbody>
-                @foreach (var obj in Model)
-                {
-                    <tr>
-                        <td class="td-text-align-center">@obj.Title</td>
-                        <td class="td-text-align-center">@obj.ISBN</td>
-                        <td class="td-text-align-center">@obj.Price</td>
-                        <td class="td-text-align-center">@obj.Author</td>
-                        <td class="td-text-align-center">@obj.Category.Name</td>
-                        <td>
-                            <div class="row justify-content-center">
-                                <div class="btn-group col-xl-6 col-lg-6 col-md-12 col-sm-12" role="group">
-                                    <a asp-controller="Product" asp-action="Upsert" asp-route-id="@obj.Id" class="btn btn-primary btn-block">
-                                        <i class="bi bi-pencil-square"></i> Edit
-                                    </a>
-                                </div>
-                                <div class="btn-group col-xl-6 col-lg-6 col-md-12 col-sm-12" role="group">
-                                    <a asp-controller="Product" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger btn-block">
-                                        <i class="bi bi-trash-fill"></i>Delete
-                                    </a>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                }
-            </tbody>
         </table>
     </div>
 </div>
+
+@section Scripts {
+    <script src="~/js/product.js"></script>
+}
