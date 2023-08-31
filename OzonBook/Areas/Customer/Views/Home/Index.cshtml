@@ -16,8 +16,26 @@
                                 <p class="card-title text-warning text-center">by <b>@product.Author</b></p>
                             </div>
                             <div class="pl-1">
-                                <p class="text-dark text-opacity-75 text-center">As low as: <span>@CurrencyFormatter.FormatCurrency(product.Price100.GetValueOrDefault(), "ca-CA")</span></p>
+                                <p class="text-dark text-opacity-75 text-center mb-0">
+                                    List price: <span class="text-decoration-line-through">
+                                        @CurrencyFormatter.FormatCurrency(product.ListPrice.GetValueOrDefault(), "ca-CA")
+                                    </span>
+                                </p>
                             </div>
+                            <div class="pl-1">
+                                <p class="text-dark text-opacity-75 text-center">
+                                    As low as: <span>
+                                        @CurrencyFormatter.FormatCurrency(product.Price100.GetValueOrDefault(), "ca-CA")
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <a asp-action="Details" 
+                            asp-route-ProductId="@product.Id"
+                            class="btn btn-primary bg-gradient border-0 form-control">
+                                Details
+                            </a>
                         </div>
                     </div>
                 </div>

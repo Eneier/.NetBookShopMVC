@@ -43,7 +43,7 @@ namespace Ozon.DataAccess.Repository
         }
 
         //Category, CoverType
-        public IEnumerable<T> GetAll(string? includeProperties = null)
+        public  IEnumerable<T> GetAll(string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
             if(!string.IsNullOrEmpty(includeProperties))

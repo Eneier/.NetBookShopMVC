@@ -2,6 +2,7 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Ozon.DataAccess.Repository;
 using Ozon.DataAccess.Repository.IRepository;
+using Microsoft.Extensions.Logging;
 using Ozon.Models;
 
 namespace OzonBook.Areas.Customer.Controllers;
@@ -22,6 +23,12 @@ public class HomeController : Controller
     {
         IEnumerable<Product> productList = _unitOfWork.Product.GetAll(includeProperties: "Category");
         return View(productList);
+    }
+
+    public IActionResult Details(int ProductId)
+    {
+        Product product = _unitOfWork.Product.Get(u => u.Id == ProductId, includeProperties: "Category");
+        return View(product);
     }
 
     public IActionResult Privacy()
